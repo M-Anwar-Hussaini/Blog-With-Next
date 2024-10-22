@@ -4,7 +4,7 @@ import Navbar from '@/components/Navbar';
 import { ThemeProvider } from '@/components/ThemeProvider';
 
 export const metadata: Metadata = {
-  title: 'Hussaini Blog',
+  title: 'Scientific Blog',
   description: 'Inforamative blogs about techs',
 };
 
@@ -23,7 +23,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <main className="max-w-2xl m-auto">{children}</main>
+          <main className="max-w-2xl mx-auto">{children}</main>
         </ThemeProvider>
       </body>
     </html>
