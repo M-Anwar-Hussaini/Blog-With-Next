@@ -3,7 +3,7 @@ import { ModeToggle } from './ModeToggle';
 
 export default function Navbar() {
   return (
-    <nav className="w-full flex items-start justify-between py-5">
+    <nav className="flex items-center justify-between py-5 max-w-2xl mx-auto">
       <Link href="/" className="font-bold text-3xl">
         Marshal<span className="text-primary">Blog</span>
       </Link>
