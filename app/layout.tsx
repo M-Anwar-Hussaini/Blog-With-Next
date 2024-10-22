@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
+import Navbar from '@/components/Navbar';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -14,14 +15,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="max-w-2xl mx-auto px-4">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <Navbar />
+          <main>{children}</main>
         </ThemeProvider>
       </body>
     </html>
