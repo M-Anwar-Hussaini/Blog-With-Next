@@ -6,6 +6,8 @@ import { defineQuery } from 'next-sanity';
 import Link from 'next/link';
 import Image from 'next/image';
 
+export const revalidate = 30;
+
 async function fetchData() {
   const query = defineQuery(`
       *[_type == 'blog'] | order(createaAt desc) {
@@ -21,7 +23,6 @@ async function fetchData() {
 
 export default async function Home() {
   const data = await fetchData();
-  console.log(data);
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 mt-5 md:gap-4">
       {data.map((post, index) => (

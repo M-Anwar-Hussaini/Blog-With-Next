@@ -3,6 +3,8 @@ import { client, urlFor } from '@/lib/sanity';
 import { defineQuery, PortableText } from 'next-sanity';
 import Image from 'next/image';
 
+export const revalidate = 30;
+
 async function fetchBlog(slug: string) {
   const query = defineQuery(`
     * [_type == 'blog' &&
@@ -24,7 +26,6 @@ export default async function BlogPage({
   params: { slug: string };
 }) {
   const blog: DetailedBlog = await fetchBlog(params.slug);
-  // console.log(blog);
   return (
     <div className="mt-8 px-2">
       <h1>
