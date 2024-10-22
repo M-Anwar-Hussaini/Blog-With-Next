@@ -26,7 +26,7 @@ export default async function BlogPage({
   const blog: DetailedBlog = await fetchBlog(params.slug);
   // console.log(blog);
   return (
-    <div className="mt-8">
+    <div className="mt-8 px-2">
       <h1>
         <span className="block text-base text-center text-primary font-semibold tracking-wide uppercase">
           Anwar Hussaini - Blog
